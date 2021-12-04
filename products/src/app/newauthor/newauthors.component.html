@@ -1,0 +1,77 @@
+<div class='card' style="width: 500px;margin: auto;">
+    <form (ngSubmit)="AddAuthor()" style="border-radius: 10px;">
+<div class='card-header' style="text-align: center;font-weight: 900;color: darkslateblue;">
+ ADD AUTHOR
+</div>
+<div class='card-body' style="background-color: thistle;">            
+    <!-- <table class='table'>       
+    
+      <tbody>  
+        <tr>
+          <td> <label>Author Id</label></td>
+          <td><input type="text" name="a_id" [(ngModel)]="authorDetail.authorid" required/></td>                  
+        </tr>  
+          <tr>
+              <td> <label>Author Name</label></td>
+              <td><input type="text" name="a_name" [(ngModel)]="authorDetail.authorname"required/></td>                  
+            </tr>   
+            <tr>
+                <td><label>Work</label></td>
+                <td><input type="text" name="a_work" [(ngModel)]="authorDetail.work"required/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Published</label></td>
+                <td><input type="text" name="a_published" [(ngModel)]="authorDetail.published"required/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Author imageUrl</label></td>
+                <td><input type="text" name="a_image" [(ngModel)]="authorDetail.imageUrl"required/></td>                  
+              </tr>  
+              <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table> -->
+    <div class="form-group"  style="text-align: left;">
+      <label  >Author Id</label>
+      <br>
+      <input type="text" name="a_id" style="width: 400px;" [(ngModel)]="authorDetail.authorid" required/>                
+
+    </div>
+    <br>
+     
+    <div class="form-group">
+      <label>Author Name</label>
+      <br>
+      <input type="text" name="a_name" style="width: 400px;" [(ngModel)]="authorDetail.authorname"required/>
+    </div>
+    <br>
+
+    
+    <div class="form-group">
+      <label>Work</label>  
+      <br>
+    <input type="text" name="a_work" style="width: 400px;" [(ngModel)]="authorDetail.work"required/>                  
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label>Published</label> 
+      <br>  
+      <input type="text" name="a_published" style="width: 400px;" [(ngModel)]="authorDetail.published"required/>           
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label>Author imageUrl</label> 
+      <br>     
+      <input type="text" name="a_image" style="width: 400px;" [(ngModel)]="authorDetail.imageUrl"required/>    </div> 
+  <br>
+
+  
+  <div style="text-align: center;">      
+    <input type="submit" style="border-radius: 5px;background-color: steelblue;color: white;" value="Submit" />  </div>
+</div>
+</form>
+</div>

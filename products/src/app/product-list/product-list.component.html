@@ -1,0 +1,68 @@
+<div class="card">
+   <div class="card-header"> 
+   {{title}}
+   </div>
+   <div class="card-body">
+    <div class="table-responsive">
+    <table class="table">
+   <thead>
+   <tr>
+    <th>
+     <button class="btn btn-primary"
+     (click)='toggleImage()' >
+      {{showImage ? 'Hide':'Show'}}Image
+     </button>
+    </th>
+    <th>products</th>
+    <th>code</th>
+    <th>availabe</th>
+    <th>price</th>
+    <th>5 star rating</th>
+   </tr>
+   </thead>
+   <tbody>
+     <tr *ngFor='let product of products'>
+       <td>
+         <img *ngIf='showImage'
+          [src]='product.imageUrl' 
+         [title]='product.productName'
+         [style.width.px]='imageWidth'
+         [style.margin.px]='imageMargin'>
+       </td>
+       <td>
+         {{product.productName}}
+       </td>
+       <td>
+        {{product.productCode}}
+      </td>
+      <td>
+        {{product.releaseDate}}
+      </td>
+      <td>
+        {{product.price}}
+      </td>
+      <td>
+        {{product.starRating}}
+      </td>
+      <td>
+        <!-- (click)="editProduct(product)" -->
+        <button class="btn btn-warning" *ngIf="_auth.loggedIn()" (click)="editProduct(product)" style="cursor: pointer" >
+         Edit
+        </button>
+      </td>
+      <td>
+        <!-- (click)="deleteProduct(product)" -->
+        <button class="btn btn-danger" *ngIf="_auth.loggedIn()" (click)="deleteProduct(product)"  style="cursor: pointer;" >
+         Delete
+        </button>
+      </td>
+
+     </tr>
+                               
+   </tbody>
+    </table>
+
+    </div>
+    
+   </div>
+</div>

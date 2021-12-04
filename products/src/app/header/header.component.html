@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+<div class="card-header">
+
+  <a routerLink="/login" *ngIf="!_auth.loggedIn()" routerLinkActive="active">Login</a>
+  &nbsp;&nbsp;&nbsp;
+  <a routerLink="/" *ngIf="_auth.loggedIn()">Products</a>
+  &nbsp;&nbsp;&nbsp;
+  <a routerLink="/add" *ngIf="_auth.loggedIn()" >Add product</a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="" *ngIf="_auth.loggedIn()" (click)="logoutUser()">Logout</a>
+</div>

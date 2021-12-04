@@ -1,0 +1,26 @@
+
+<div style="text-align:center">
+  <h1 style="color: rgb(45, 70, 21);">
+     {{ title }}
+  </h1>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-left: 40px;">
+  <ul class="navbar-nav navbar-right">
+    <a class="nav-link" style="cursor:pointer" routerLink="/books">Books</a>
+      <a class="nav-link"style="cursor:pointer" routerLink="/authors">Authors</a> 
+  <a class="nav-link" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="loggedUserb()" >Add Book</a>
+  <a class="nav-link"style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="loggedUsera()">Add Author</a>
+  <a class="nav-link" routerLink="/login" *ngIf="!_auth.loggedIn()" routerLinkActive="active">Login</a> 
+  <a class="nav-link" routerLink="/register" *ngIf="!_auth.loggedIn()" routerLinkActive="active">SignUp</a> 
+
+  <a class="nav-link" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="logoutUser()">Logout</a> 
+
+</ul>
+</nav>
+<div style="background-color: chocolate;">
+   
+   <div class="container" style="background-color: chocolate">
+    <router-outlet style="background-color: cornflowerblue;"></router-outlet>            
+  </div> 
+</div>

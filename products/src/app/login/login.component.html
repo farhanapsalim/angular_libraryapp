@@ -1,0 +1,34 @@
+<div class="py-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto" >
+        <span class="anchor" id="formLogin"></span>
+  
+        <!-- form card login -->
+        <div class="card " style="border-radius: 10px;background-color: burlywood;" >
+          <div class="card-header" style="background-color: darkgray;border-radius: 70px;">
+            <h3 class="mb-0" style="color: darkcyan;text-align: center;" >Sign In</h3>
+          </div>
+          <div class="card-body" >
+
+            <form   #userLogin="ngForm" (ngSubmit)="loginUser()" >
+              <div class="form-group">
+                <label for="uname1" style="color: brown;font-weight: 900;">Username</label>
+                <input type="text" style="" name="uname" class="form-control" FormControlName="uname"  [(ngModel)]="user.uname"  title=" characters only" required />
+              </div>
+              <div class="form-group">
+                <label  style="color: brown;;font-weight: 900;">Password</label>
+                <input type="password" name="password" class="form-control" FormControlName="password" [(ngModel)]="user.password" minlength="4"required />
+              </div>
+              <br><br>
+              <!-- [disabled]="userLogin.form.invalid" -->
+            <div style="text-align: center;">              <button type="submit" class="btn btn-success float-left" [disabled]="userLogin.form.invalid"  >Login</button>
+            </div>
+            </form>                             
+          </div>
+          <!--/card-block-->
+        </div>
+        <!-- /form card login -->
+  
+      </div>
+    </div>
+  </div>

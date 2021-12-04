@@ -1,0 +1,85 @@
+
+
+
+
+
+<div class='card' style="width: 500px;margin: auto;">
+  <form (ngSubmit)="AddBook()" style="border-radius: 10px;">
+<div class='card-header' style="text-align: center;font-weight: 900;color: darkslateblue;">
+  ADD BOOK</div>
+<div class='card-body' style="background-color: thistle;">            
+  
+  <!-- <tbody> 
+    <tr>
+      <td> <label>Book Id</label></td>
+      <td><input type="text" name="b_id" [(ngModel)]="bookDetail.bookid" required/></td>                  
+    </tr>   
+      <tr>
+          <td> <label>Book Title</label></td>
+          <td><input type="text" name="b_title" [(ngModel)]="bookDetail.title" required/></td>                  
+        </tr>   
+        <tr>
+            <td><label>Book Author</label></td>
+            <td><input type="text" name="b_author" [(ngModel)]="bookDetail.author" required/></td>                  
+          </tr>  
+          <tr>
+            <td><label>Genre</label></td>
+            <td><input type="text" name="b_genre" [(ngModel)]="bookDetail.genre" required/></td>                  
+          </tr>  
+          <tr>
+            <td><label>Book imageUrl</label></td>
+            <td><input type="text" name="b_image" [(ngModel)]="bookDetail.imageUrl"required/></td>                  
+          </tr>  
+          <tr>
+            <td></td>
+            <td><input type="submit" value="Submit" /></td>                  
+          </tr>             
+  </tbody> -->
+
+  <div class="form-group"  style="text-align: left;">
+    <label  >Book Id</label>
+    <br>
+
+    <input type="text" name="b_id" style="width: 400px;" [(ngModel)]="bookDetail.bookid" required/>                
+
+  </div>
+  <br>
+  
+  <div class="form-group">
+    <label>Book Title</label>
+    <br>
+    <input type="text" name="b_title" style="width: 400px;" [(ngModel)]="bookDetail.title" required/>
+  </div>
+  <br>
+   
+  
+  <div class="form-group">
+    <label>Book Author</label>  
+    <br>
+  <input type="text" name="b_author" style="width: 400px;" [(ngModel)]="bookDetail.author" required/>                  
+  </div>
+  <br>
+  
+  <div class="form-group">
+    <label>Genre</label> 
+    <br>  
+    <input type="text" name="b_genre" style="width: 400px;" [(ngModel)]="bookDetail.genre" required/>           
+  </div>
+  <br>
+
+  
+
+  <div class="form-group">
+    <label>Book imageUrl</label> 
+    <br>     
+    <input type="text" name="b_image" style="width: 400px;" [(ngModel)]="bookDetail.imageUrl" required/> 
+     </div> 
+<br>
+
+
+<div style="text-align: center;">      
+  <input type="submit" style="border-radius: 5px;background-color: steelblue;color: white;" value="Submit" />  </div>
+</div>
+</form>
+</div>
+
